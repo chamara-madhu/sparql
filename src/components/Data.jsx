@@ -17,6 +17,10 @@ export default class Terms extends Component {
   };
 
   componentDidMount = () => {
+    this.fetchData();
+  };
+
+  fetchData = () => {
     axios
       .get("http://localhost:9090/getAllItems")
       .then((res) => {
@@ -59,6 +63,8 @@ export default class Terms extends Component {
         .catch((err) => {
           console.log(err);
         });
+    } else {
+      this.fetchData();
     }
   };
 
