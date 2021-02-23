@@ -42,13 +42,13 @@ export default class Terms extends Component {
         data.zipcode = this.state.zipcode;
       }
       if (this.state.name) {
-        data.name = this.state.zipcode;
+        data.name = this.state.name;
       }
       if (this.state.policedistrict) {
-        data.policedistrict = this.state.zipcode;
+        data.policedistrict = this.state.policedistrict;
       }
       if (this.state.neighborhood) {
-        data.neighborhood = this.state.zipcode;
+        data.neighborhood = this.state.neighborhood;
       }
 
       axios
@@ -76,6 +76,7 @@ export default class Terms extends Component {
                     className="form-control"
                     id="zipcode"
                     name="zipcode"
+                    value={this.state.zipcode}
                     onChange={this.handleChange}
                   />
                 </div>
@@ -86,6 +87,7 @@ export default class Terms extends Component {
                     className="form-control"
                     id="name"
                     name="name"
+                    value={this.state.name}
                     onChange={this.handleChange}
                   />
                 </div>
@@ -96,6 +98,7 @@ export default class Terms extends Component {
                     className="form-control"
                     id="policedistrict"
                     name="policedistrict"
+                    value={this.state.policedistrict}
                     onChange={this.handleChange}
                   />
                 </div>
@@ -106,6 +109,7 @@ export default class Terms extends Component {
                     className="form-control"
                     id="neighborhood"
                     name="neighborhood"
+                    value={this.state.neighborhood}
                     onChange={this.handleChange}
                   />
                 </div>
